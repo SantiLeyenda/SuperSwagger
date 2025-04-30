@@ -1,0 +1,12 @@
+package com.example.library.repository;
+
+import com.example.library.model.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.Optional;
+
+
+// encontrar el usuario por nombre de usuario
+public interface UserRepository extends JpaRepository<User, Long> {
+    Optional<User> findByUsername(String username);
+}
